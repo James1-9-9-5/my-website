@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Spooner - GIS Analyst</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=HK+Grotesk:wght@500&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .banner {
+            background-color: #C1E1C1;
+            color: black; /* Text color remains black */
+            text-align: center;
+            padding: 30px 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .banner h1 {
+            margin: 0;
+            font-size: 2.5rem; /* Size for JAMES SPOONER */
+            font-weight: 500;
+        }
+
+        .banner p {
+            margin: 5px 0 0;
+            font-size: 2rem; /* Size for GIS ANALYST */
+            font-weight: 400;
+        }
+
+        .content {
+            display: flex;
+            height: auto;
+        }
+
+        .left-section {
+            width: 25%;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .right-section {
+            width: 75%;
+            padding: 20px;
+        }
+
+        .left-section h2 {
+            font-size: 1.3rem;
+            color: #333;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        .left-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .left-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .left-section .contact p {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 5px 0;
+            font-size: 1rem;
+            color: black;
+        }
+
+        .left-section .contact span {
+            font-size: 1.2rem;
+        }
+
+        .collapsible {
+            cursor: pointer;
+            display: flex;
+            justify-content: start; /* Align items to the left */
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 0;
+            padding: 10px;
+            border: none;
+            background: none;
+            color: #333;
+            outline: none;
+            text-align: left;
+            width: 100%;
+            gap: 10px; /* Add some spacing between text and icon */
+        }
+
+        .collapsible:after {
+            content: "▼"; /* Downward arrow when text is closed */
+            font-size: 0.5rem; /* Reduced size for the arrow */
+            margin-left: 10px; /* Position closer to the text */
+            transition: transform 0.3s ease; /* Add smooth animation */
+        }
+
+        .collapsible.active:after {
+            content: "▲"; /* Upward arrow when text is open */
+            font-size: 0.5rem; /* Reduced size for the arrow */
+        }
+
+        .content-section {
+            display: none; /* Initially hidden */
+            margin-left: 20px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .right-section h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ccc;
+            display: inline-block;
+        }
+
+        .job-box {
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 15px;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .job-box.active {
+            background-color: #C1E1C1; /* Match the banner color */
+            border-color: #C1E1C1;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const collapsibles = document.querySelectorAll(".collapsible");
+            collapsibles.forEach(button => {
+                button.addEventListener("click", () => {
+                    const jobBox = button.closest('.job-box'); // Get the parent job-box
+                    jobBox.classList.toggle('active'); // Toggle active class
+                    const content = button.nextElementSibling;
+                    content.style.display = content.style.display === "block" ? "none" : "block";
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="banner">
+        <h1>JAMES SPOONER</h1>
+        <p>GIS ANALYST</p>
+    </div>
+    <div class="content">
+        <div class="left-section">
+            <h2>Contact</h2>
+            <div class="contact">
+                <p>
+                    <span style="font-size: 1.2rem; margin-right: 10px;">📞</span>
+                    +1 672 866 2995
+                </p>
+                <p>
+                    <span style="font-size: 1.2rem; margin-right: 10px;">✉️</span>
+                    jamesspooner1995@gmail.com
+                </p>
+            </div>
+
+            <h2>Skills</h2>
+            <ul>
+                <li>Esri Suite (ArcGIS Pro, Enterprise, Field Maps, Dashboards)</li>
+                <li>SQL (MySQL)</li>
+                <li>QGIS</li>
+                <li>Data Analysis</li>
+                <li>Spatial Analysis</li>
+                <li>ModelBuilder</li>
+                <li>Microsoft Power BI</li>
+                <li>Microsoft Office</li>
+            </ul>
+
+            <h2>Education</h2>
+            <p><strong>University of Brighton (2013-2016)</strong><br>BSc (Hons) Geography</p>
+            <p><strong>Dartford Grammar School (2006-2013)</strong><br>International Baccalaureate</p>
+
+        </div>
+        <div class="right-section">
+            <h2>Summary</h2>
+            <p class="summary">
+                An experienced GIS Analyst with a strong understanding of ArcGIS Pro and SQL, along with working knowledge of Python, seeking a new opportunity that facilitates professional development and offers a varied and challenging workload.
+            </p>
+
+            <h2>Professional Experience</h2>
+
+            <div class="job-box">
+                <button class="collapsible">
+                    <span class="job-title">GIS Analyst - Ringway (March 2022 - August 2024)</span>
+                </button>
+                <div class="content-section">
+                    <ul>
+                        <li>Analyzed complex spatial datasets to create accurate and detailed maps, charts, and reports. These visualizations were key in transforming raw data into actionable insights.</li>
+                        <li>Maintained and updated relational databases to ensure the accuracy and validity of data.</li>
+                        <li>Designed and implemented efficient geoprocessing models using ModelBuilder. This automation of workflows and repetitive processes improved data processing speed and allowed team members to concentrate their time on higher-priority tasks.</li>
+                        <li>Imported and aligned CAD files with existing layers for accurate spatial analysis.</li>
+                        <li>Consulted with Transport for London to discuss and resolve project-related issues, ensuring project goals were met on time.</li>
+                        <li>Consistently achieved a high KPI of 95%, demonstrating exceptional performance and efficiency in meeting both deadlines standards.</li>
+                        <li>Contributed to reducing company backlog, leading to the collection of approximately 80% of outstanding fees.</li>
+                        <li>Optimized operational efficiency while reducing expenditure through analysis involving current operative routes.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="job-box">
+                <button class="collapsible">
+                    <span class="job-title">GIS Technician - Cyient (November 2021 - March 2022)</span>
+                </button>
+                <div class="content-section">
+                    <ul>
+                        <li>Supported agricultural land management and subsidy distribution for the Rural Payments Agency (RPA).</li>
+                        <li>Managed and processed spatial data to ensure accurate mapping of agricultural parcels and other rural assets.</li>
+                        <li>Classified habitat and land cover to determine the eligibility of areas for subsidies.</li>
+                        <li>Updated databases with accurate land parcel information.</li>
+                        <li>Tasked with conducting quality assurance after reliably exceeding the KPI.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="job-box">
+                <button class="collapsible">
+                    <span class="job-title">GIS Internship - Wildlife & Ecological Investments (July 2021 - October 2021)</span>
+                </button>
+                <div class="content-section">
+                    <ul>
+                        <li>Produced vegetation classification maps utilizing Sentinel-2 and SRTM imagery, enabling the analysis of distribution patterns.</li>
+                        <li>Used spectral band analysis, and applied machine learning algorithms like K-means clustering for habitat classification.</li>
+                        <li>Plotted endangered species populations on topographic maps to assess altitudinal variation.</li>
+                        <li>Performed kernel density, optimized hot spot analysis, and density-based clustering analysis on daily GPS data from rhinos to identify activity hotspots, enabling the anti-poaching unit to focus patrols more effectively.</li>
+                        <li>Provided actionable insights to the conservation team, enabling targeted removal of invasive species to restore ecosystems.</li>
+                    </ul>
+                </div>    
+            </div>
+
+            <h2>Personal Projects</h2>
+            <div class="job-box">
+                <button class="collapsible">
+                    <span class="job-title">Gondwana Game Reserve Research Project</span>
+                </button>
+                <div class="content-section">
+                    <ul>
+                        <li>Link</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <h2>Volunteering</h2>
+            <div class="job-box">
+                <button class="collapsible">
+                    <span class="job-title">Co-ordinator - Parque Machía, Villa Tunari, Bolivia (January 2019 - March 2019)</span>
+                </button>
+                <div class="content-section">
+                    <ul>
+                        <li>Details about this volunteering experience can go here if needed.</li>
+                        <li>Use a list format or paragraphs to describe the responsibilities or achievements.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
